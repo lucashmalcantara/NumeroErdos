@@ -14,6 +14,7 @@ namespace NumeroErdos
 
         private const string NOME_ERDOS = "P. Erdos";
         private const string ERDOS_INFINITO = "infinito";
+        private const int QUANTIDADE_MAXIMA_ARTIGOS = 100;
 
         static void Main(string[] args)
         {
@@ -53,7 +54,7 @@ namespace NumeroErdos
                 var conjuntoTeste = new ConjuntoTeste
                 {
                     Numero = numeroTeste,
-                    Grafo = new GrafoListaAdjacencia(100),
+                    Grafo = new GrafoListaAdjacencia(QUANTIDADE_MAXIMA_ARTIGOS),
                     IndiceAutores = new Dictionary<string, int>(),
                     QuantidadeArtigos = int.Parse(linhas[indiceTeste])
                 };
